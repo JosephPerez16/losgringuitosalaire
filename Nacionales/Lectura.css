@@ -1,0 +1,139 @@
+.header-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #20264a;
+  padding: 15px 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-principal .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 50px;
+  transition: transform 0.3s;
+}
+
+.header-principal .logo:hover {
+  transform: scale(1.03);
+}
+
+.header-principal .logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.titulo-principal {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.titulo-principal span {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+  color: #ff3b3f;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+.modo-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #004aad;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.modo-btn:hover {
+  background-color: #004aad;
+  color: white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--fondo);
+  color: var(--texto);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.3s;
+}
+
+main img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+main img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+main h2 {
+  font-size: 1.6rem;
+  color: #004aad;
+  margin-bottom: 10px;
+  transition: color 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+main h2:hover {
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+.fecha {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+:root {
+  --fondo: #f5f6fa;
+  --texto: #222;
+}
+
+body.dark {
+  --fondo: #0e1116;
+  --texto: #f0f0f0;
+}
+
+body.dark main {
+  background-color: #1c1f26;
+  box-shadow: 0 2px 15px rgba(255,255,255,0.05);
+}
+
+body.dark .modo-btn {
+  background-color: #222;
+  color: white;
+}
+
+body.dark .modo-btn:hover {
+  background-color: white;
+  color: #222;
+}

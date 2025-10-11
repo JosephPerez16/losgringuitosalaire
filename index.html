@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Gringuitos Al Aire</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Logos/logogringuito.jpeg" alt="Los Gringuitos Al Aire">
+      <h1 class="titulo-principal">Los Gringuitos <span>Al Aire</span></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#nacionales">Noticias</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="header-social">
+  <a href="https://www.youtube.com/@LosGringuitosalAire" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="social-icon-top">
+  </a>
+  <a href="https://www.instagram.com/losgringuitosrd" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon-top">
+  </a>
+</div>
+
+    <div class="menu-toggle">☰</div>
+  </header>
+
+  <div id="modal-enlaces" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Enlaces de Interés</h3>
+      <ul>
+        <li><a href="https://www.bematosconsultoreslegales.com" target="_blank">BeMatos Consultores Legales</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ticker">
+  <div class="ticker-text" id="ticker-text">
+    <span class="ticker-item">Carolina Mejía saluda la designación de la nueva embajadora de EE. UU. en el país</span>
+    <span class="ticker-item">Pujols deja claro que si los Angelinos le piden ser dirigente, dejaría el Clásico Mundial</span>
+    <span class="ticker-item">La Feria del Libro cierra con más de 700 mil visitantes y RD$75 millones en ventas.</span>
+    <span class="ticker-item">Abinader deja en funcionamiento un sistema de videovigilancia con fibra óptica en Dajabón</span>
+    <span class="ticker-item">Día de la Salud Mental: la OMS alerta sobre los trastornos en emergencias humanitarias</span>
+    <span class="ticker-item">La ABA afirma Cuenta Básica para Mipymes es un paso relevante hacia la inclusión y formalización</span>
+    <span class="ticker-item">Largas filas en cruces en la frontera norte de México por el cierre del Gobierno en EE. UU.</span>
+    <span class="ticker-item">Salman Rushdie: "Para una parte de la sociedad, la cultura se ha convertido en el enemigo".</span>
+  </div>
+</div>
+
+  <section class="contenido-principal scroll-anim">
+    <div class="contenido-grid">
+      <div class="banner-izquierda modern-banner">
+        <div class="banner-overlay">
+          <h2 class="encabezado-principal">
+            La Feria del Libro cierra con más de 700 mil visitantes y RD$75 millones en ventas.
+          </h2>
+          <p class="subtitulo-importante">
+            El ministro de Cultura Roberto Ángel Salcedo expresó su satisfacción por los resultados alcanzados.
+          </p>
+        </div>
+        <img src="Imagenes/Importante.jpeg" alt="Importante" class="banner-importante">
+        <div class="descripcion-importante">
+          <p>Con la Plaza de la Cultura aún llena de visitantes, concluyó este domingo la <strong>XXVII Feria Internacional del Libro de Santo Domingo (FILSD 2025)</strong>, una edición que alcanzó más de <strong>705 mil visitantes</strong> y <strong>RD$75 millones</strong> en ventas de libros.</p>
+          <p>El cierre se realizó en el <strong>auditorio Profesor Juan Bosch</strong> de la <strong>Biblioteca Nacional Pedro Henríquez Ureña</strong>, donde el director de la Feria, <strong>Joan Ferrer</strong>, ofreció un balance del evento cultural.</p>
+          <p>Desde el pasado 26 de septiembre hasta su clausura, este 5 de octubre, la feria reunió a más de <strong>705,000 personas</strong>, entre estudiantes, familias, escritores y profesionales del libro.</p>
+          <p>Durante los nueve días de feria se realizaron más de 600 actividades, 130 presentaciones de libros, 12 conferencias, 106 charlas, 72 coloquios, 76 actividades infantiles, 39 recitales y lecturas, además de 16 obras de teatro, 44 talleres, 40 proyecciones cinematográficas, seis paneles, entre otras.</p>
+        </div>
+      </div>
+
+      <div class="anuncios-derecha">
+        <h2>ANUNCIOS</h2>
+        <div class="anuncios-grid">
+          <a href="https://itla.edu.do" target="_blank" class="anuncio-item">
+            <img src="Anuncios/ITLAanuncio.jpeg" alt="Anuncio ITLA">
+          </a>
+          <a href="https://indotel.gob.do/" target="_blank" class="anuncio-item">
+            <img src="Anuncios/Indotel.png" alt="Anuncio Indotel">
+          </a>
+          <a href="https://www.instagram.com/filsantodomingo/?hl=es-la" target="_blank" class="anuncio-item">
+            <img src="Anuncios/Feriadellibro.jpeg" alt="Anuncio Feria del Libro 2025">
+          </a>
+        </div>
+        <div class="cubiculos">
+          <div class="cubiculo azul">Anúnciate con Nosotros</div>
+          <div class="cubiculo azul">Anúnciate con Nosotros</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="nacionales">
+    <h2>Noticias</h2>
+    <div class="news-grid" id="nacionales-grid">
+      
+      <!-- Noticias originales -->
+      <section class="news-category politica">
+        <h3>Política</h3>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="Noticias/politica.jpg" alt="Noticia Política">
+            <h4>Carolina Mejía saluda la designación de la nueva embajadora de EE. UU. en el país</h4>
+            <p>Dijo que el liderazgo de Leah Francis Campos fortalecerá aún más los lazos entre ambas naciones.</p>
+            <a href="Nacionales/politica.html">Leer más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-category deportes">
+        <h3>Deportes</h3>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="Noticias/pujols.jpg" alt="Noticia Deportes">
+            <h4>Pujols deja claro que si los Angelinos le piden ser dirigente, dejaría el Clásico Mundial</h4>
+            <p>El exdirigente del Escogido afirmó que aceptar la oferta de Los Ángeles "no sería traicionar a la patria"</p>
+            <a href="Nacionales/deporte.html">Leer más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-category entretenimiento">
+        <h3>Entretenimiento</h3>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="Noticias/Feriadellibro.jpeg" alt="Noticia Entretenimiento">
+            <h4>La Feria del Libro cierra con más de 700 mil visitantes y RD$75 millones en ventas.</h4>
+            <p>El ministro de Cultura Roberto Ángel Salcedo expresó su satisfacción por los resultados alcanzados.</p>
+            <a href="Nacionales/entretenimiento.html">Leer más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-category tecnologia">
+        <h3>Tecnología</h3>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="Noticias/abinader.jpeg" alt="Noticia Tecnología">
+            <h4>Abinader deja en funcionamiento un sistema de videovigilancia con fibra óptica en Dajabón</h4>
+            <p>El mandatario explicó que la nueva tecnología está diseñada para reforzar la seguridad fronteriza.</p>
+            <a href="Nacionales/tecnologia.html">Leer más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-category salud">
+        <h3>Salud</h3>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="Noticias/salud.jpg" alt="Noticia Salud">
+            <h4>Día de la Salud Mental: la OMS alerta sobre los trastornos en emergencias humanitarias</h4>
+            <p>En total, unos 67 millones de personas con trastornos mentales viven en contextos de conflicto, desastre o desplazamiento</p>
+            <a href="Nacionales/salud.html">Leer más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-category economia">
+        <h3>Economía</h3>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="Noticias/economia.jpg" alt="Noticia Economia">
+            <h4>La ABA afirma Cuenta Básica para Mipymes es un paso relevante hacia la inclusión y formalización</h4>
+            <p>El gremio destacó la importancia que reviste este conglomerado para la economía nacional</p>
+            <a href="Nacionales/economia.html">Leer más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-category internacionales">
+        <h3>Internacionales</h3>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="Noticias/internacionales.jpg" alt="Noticia Internacionales">
+            <h4>Largas filas en cruces en la frontera norte de México por el cierre del Gobierno en EE. UU.</h4>
+            <p>El cierre parcial del gobierno federal de Estados Unidos está causando graves afectaciones en los cruces fronterizos entre Ciudad Juárez (México) y El Paso (Texas)</p>
+            <a href="Nacionales/internacionales.html">Leer más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-category educacion">
+        <h3>Educación</h3>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="Noticias/educacion.jpg" alt="Noticias Educacion">
+            <h4>Salman Rushdie: "Para una parte de la sociedad, la cultura se ha convertido en el enemigo"</h4>
+            <p>El escritor dijo que el mundo está al revés, porque "la educación, el arte, el pensamiento se consideran cosas malas"</p>
+            <a href="Nacionales/educacion.html">Leer más</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer id="contacto">
+    <div class="footer-social">
+      <a href="https://www.youtube.com/@LosGringuitosalAire" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/losgringuitosrd" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+      </a>
+    </div>
+    <div class="footer-container">
+      <p>© 2025 Los Gringuitos Al Aire - Todos los derechos reservados</p>
+    </div>
+  </footer>
+</body>
+</html>
