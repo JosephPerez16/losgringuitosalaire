@@ -1,7 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const navUl = document.querySelector("nav ul");
-  menuToggle.addEventListener("click", () => navUl.classList.toggle("show"));
+
+  menuToggle.addEventListener("click", () => {
+    navUl.classList.toggle("show");
+  });
+
+  const navLinks = document.querySelectorAll("nav ul li a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (navUl.classList.contains("show")) {
+        navUl.classList.remove("show");
+      }
+    });
+  });
 
   const scrollAnimElements = document.querySelectorAll(".scroll-anim");
   const scrollHandler = () => {
@@ -13,12 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   window.addEventListener("scroll", scrollHandler);
   scrollHandler();
-});
 
-function loadNationalTicker() {
   const ticker = document.getElementById("ticker-text");
-  const newsTitles = [];
-  const nationalArticles = document.querySelectorAll('#nacionales-grid .news-item h4');
-  nationalArticles.forEach(article => newsTitles.push(article.textContent));
-  ticker.textContent = "🔔 " + newsTitles.join(" • ") + " • ";
-}
+  if (ticker) {
+    const nationalArticles = document.querySelectorAll('#nacionales-grid .news-item h4');
+    const newsTitles = Array.from(nationalArticles).map(article => article.textContent);
+    ticker.textContent = "🔔 " + newsTitles.join(" • ") + " • ";
+  }
+});

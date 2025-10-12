@@ -120,14 +120,14 @@ nav ul li a:hover::after {
 }
 
 .ticker {
-  background: linear-gradient(90deg, #ff3b3f, #ff8b3f);
+  background: linear-gradient(90deg, #ec1b1e, #ff8b3f);
   color: white;
   overflow: hidden;
   white-space: nowrap;
   padding: 10px 20px;
   font-weight: 600;
   position: relative;
-  border-radius: 12px;
+  border-radius: 0%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -141,7 +141,7 @@ nav ul li a:hover::after {
 .ticker-item {
   background: rgba(255,255,255,0.2);
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: 0%;
   white-space: nowrap;
   font-size: 0.95rem;
   transition: background 0.3s;
@@ -304,7 +304,7 @@ main h2 {
 }
 
 .news-category h3 {
-  text-align: left;
+  text-align: center;
   margin-bottom: 15px;
   color: #20264a;
   font-size: 1.4rem;
@@ -599,3 +599,171 @@ footer {
     display: none;
   }
 }
+
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+  
+  .logo {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo img {
+    height: 45px;
+    margin-right: 8px;
+  }
+  
+  .titulo-principal {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .titulo-principal span {
+    font-size: 1.8rem;
+  }
+  
+  .header-social {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .social-icon-top {
+    width: 28px;
+    height: 28px;
+  }
+  
+  nav {
+    flex: 1 1 100%;
+    order: 3;
+    width: 100%;
+  }
+  
+  nav ul {
+    top: 60px;
+    right: 15px;
+    width: calc(100% - 30px);
+  }
+
+  .banner-overlay {
+    max-width: 95%;
+    left: 10px;
+    top: 10px;
+  }
+  
+  .encabezado-principal {
+    font-size: 1.5rem;
+  }
+  
+  .subtitulo-importante {
+    font-size: 1rem;
+  }
+  
+  .descripcion-importante {
+    font-size: 0.95rem;
+  }
+  
+  .contenido-grid {
+    flex-direction: column;
+  }
+  
+  .banner-izquierda,
+  .anuncios-derecha {
+    width: 100%;
+    flex: unset;
+  }
+  
+  .anuncios-derecha h2 {
+    font-size: 1.5rem;
+  }
+  
+  .anuncio-item img {
+    max-width: 90%;
+  }
+  
+  .cubiculo.azul {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .encabezado-principal {
+    font-size: 1.8rem;
+  }
+  
+  .subtitulo-importante {
+    font-size: 1.1rem;
+  }
+  
+  .descripcion-importante {
+    font-size: 1rem;
+  }
+  
+  .titulo-principal {
+    font-size: 1.9rem;
+  }
+  
+  .titulo-principal span {
+    font-size: 2rem;
+  }
+  
+  .logo img {
+    height: 48px;
+  }
+  
+  .social-icon-top {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+nav ul {
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  overflow: hidden;
+  max-height: 0; 
+  opacity: 0;
+  padding: 0;
+}
+
+nav ul.show {
+  max-height: 500px; 
+  opacity: 1;
+  padding: 15px;
+}
+
+@media(min-width: 901px) {
+  nav ul {
+    display: flex !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    padding: 0 !important;
+    overflow: visible !important; /* permite que ::after se vea */
+  }
+
+  nav ul li a {
+    position: relative;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: #ff3b3f;
+    transition: width 0.3s;
+  }
+
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+}
+
+
