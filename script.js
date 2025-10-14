@@ -3,19 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const navUl = document.querySelector("nav ul");
   const headerSocial = document.querySelector(".header-social");
 
-  menuToggle.addEventListener("click", () => {
-    navUl.classList.toggle("show");
-    if(headerSocial) {
-      headerSocial.classList.toggle("show");
-    }
-  });
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navUl.classList.toggle("show");
+      if (headerSocial) {
+        headerSocial.classList.toggle("show");
+      }
+    });
+  }
 
   const navLinks = document.querySelectorAll("nav ul li a");
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
       if (navUl.classList.contains("show")) {
         navUl.classList.remove("show");
-        if(headerSocial) headerSocial.classList.remove("show");
+        if (headerSocial) headerSocial.classList.remove("show");
       }
     });
   });
