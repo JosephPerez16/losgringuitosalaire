@@ -766,4 +766,55 @@ nav ul.show {
   }
 }
 
+/* Banner Overlay como título sobre la imagen */
+.banner-izquierda {
+  position: relative;
+  overflow: visible; /* asegura que el texto no quede cortado o detrás */
+}
+
+.banner-izquierda .banner-overlay {
+  position: relative;
+  z-index: 50; /* mantiene el texto encima siempre */
+  text-align: left;
+  margin-top: -35px;
+  margin-bottom: 50px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.35); /* efecto vidrio claro */
+  backdrop-filter: blur(6px); /* desenfoque moderno */
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.banner-izquierda .banner-overlay h2.encabezado-principal {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0d1b2a; /* azul grisáceo moderno */
+  text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.banner-izquierda .banner-overlay p.subtitulo-importante {
+  font-size: 1.1rem;
+  color: #1b263b; /* tono gris azulado elegante */
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.4);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+  .banner-izquierda .banner-overlay {
+    padding: 8px 12px;
+    margin-top: -25px;
+  }
+
+  .banner-izquierda .banner-overlay h2.encabezado-principal {
+    font-size: 1.6rem;
+  }
+
+  .banner-izquierda .banner-overlay p.subtitulo-importante {
+    font-size: 1rem;
+  }
+}
 
