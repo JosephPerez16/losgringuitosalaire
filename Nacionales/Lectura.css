@@ -1,29 +1,52 @@
 .header-principal {
   display: flex;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   background-color: #20264a;
   padding: 15px 20px;
   color: white;
   font-family: "Poppins", sans-serif;
-  position: relative;
+  position: sticky; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-bottom: 4px solid #004aad; 
 }
+
+.logo:hover img {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo:hover .titulo-principal {
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6), 0 0 10px #ff3b3f;
+  transform: translateY(-3px) scale(1.05);
+  transition: all 0.4s ease;
+}
+
+
+.header-principal .logo-titulo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .header-principal .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 50px;
   transition: transform 0.3s;
 }
 
-.header-principal .logo:hover {
-  transform: scale(1.03);
-}
-
 .header-principal .logo img {
-  height: 40px;
+  height: 50px; 
   width: auto;
   margin-right: 10px;
   border-radius: 50%;
@@ -32,23 +55,23 @@
 .titulo-principal {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #ffffff;
   letter-spacing: 1px;
+  text-align: center;
+  white-space: nowrap; 
 }
 
 .titulo-principal span {
   font-family: 'Pacifico', cursive;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #ff3b3f;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
 
+
 .modo-btn {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 10px;
   background-color: white;
   color: #004aad;
   border: none;
@@ -58,6 +81,37 @@
   font-weight: 600;
   transition: 0.3s;
 }
+
+.modo-btn:hover {
+  background-color: #004aad;
+  color: white;
+}
+
+
+@media (max-width: 900px){
+  .header-principal {
+    padding: 15px 10px;
+  }
+
+
+  .logo img {
+    height: 45px;
+    margin-right: 8px;
+  }
+
+  .titulo-principal {
+    font-size: 1.6rem;
+  }
+
+  .titulo-principal span {
+    font-size: 1.8rem;
+  }
+
+  .modo-btn {
+    margin-top: 12px;
+  }
+}
+
 
 .modo-btn:hover {
   background-color: #004aad;
