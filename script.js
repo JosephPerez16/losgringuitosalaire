@@ -37,6 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (ticker) {
     const nationalArticles = document.querySelectorAll('#nacionales-grid .news-item h4');
     const newsTitles = Array.from(nationalArticles).map(article => article.textContent);
-    ticker.textContent = "🔔 " + newsTitles.join(" • ") + " • ";
+    ticker.textContent = "🔴 " + newsTitles.join(" • ") + " • ";
   }
 });
