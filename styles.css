@@ -407,11 +407,22 @@ nav ul li a:hover::after {
   line-height: 1.6;
   color: #222;
   font-size: 1rem;
+  padding: 0 15px;
+  box-sizing: border-box; 
+  word-break: break-word; 
+  max-width: 100%;
 }
 
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(40px);}
   100% { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 600px) {
+  .descripcion-importante {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
 }
 
 .anuncios-derecha {
