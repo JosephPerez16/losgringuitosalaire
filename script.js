@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuToggle) {
     menuToggle.addEventListener("click", () => {
       navUl.classList.toggle("show");
-      if (headerSocial) {
-        headerSocial.classList.toggle("show");
-      }
+      if (headerSocial) headerSocial.classList.toggle("show");
     });
   }
 
@@ -35,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const ticker = document.getElementById("ticker-text");
   if (ticker) {
-    const nationalArticles = document.querySelectorAll('#nacionales-grid .news-item h4');
-    const newsTitles = Array.from(nationalArticles).map(article => article.textContent);
+    const tickerItems = ticker.querySelectorAll(".ticker-item");
+    const newsTitles = Array.from(tickerItems).map(item => item.textContent);
     ticker.textContent = "🔴 " + newsTitles.join(" • ") + " • ";
   }
 });
