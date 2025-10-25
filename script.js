@@ -39,4 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const newsTitles = Array.from(nationalArticles).map(article => article.textContent);
     ticker.textContent = "🔴 " + newsTitles.join(" • ") + " • ";
   }
+  
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Los Gringuitos Al Aire",
+    "url": "https://losgringuitosalaire.com/",
+    "logo": "https://losgringuitosalaire.com/Logos/logogringuito2.png",
+    "description": "Los Gringuitos Al Aire — Noticias dominicanas e internacionales: actualidad, deportes y entretenimiento."
+  });
+  document.head.appendChild(script);
 });
